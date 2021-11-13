@@ -39,7 +39,7 @@ def shutdown_session(response_or_exc):
 def log_message(d):
     # Takes input dictionary d and writes it to the Log table
     for key in d.keys():
-        add_order = Log(message=json.dumps(d[key]))
+        add_order = Log(message=json.dumps(d[str(key)]))
         g.session.add(add_order)
     g.session.commit()
 
