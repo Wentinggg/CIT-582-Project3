@@ -102,7 +102,7 @@ def trade():
                                   buy_amount=buy_amount, sell_amount=sell_amount)
                 g.session.add(add_order)
                 g.session.commit()
-                return jsonify(True)
+#                 return jsonify(True)
 
             # If the signature does not verify
             else:
@@ -120,7 +120,7 @@ def trade():
                                   buy_amount=buy_amount, sell_amount=sell_amount)
                 g.session.add(add_order)
                 g.session.commit()
-                return jsonify(True)
+#                 return jsonify(True)
 
             else:
                 # print(json.dumps(content))
