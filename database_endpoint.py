@@ -111,8 +111,8 @@ def trade():
                 # do not insert the order into the “Order” table.
                 # Instead, insert a record into the “Log” table,
                 # with the message field set to be json.dumps(payload).
-                print(json.dumps(message))
-                log_message(message)
+                print(json.dumps(content))
+                log_message(content)
                 return jsonify(False)
 
         elif platform == 'Algorand':
@@ -126,13 +126,13 @@ def trade():
 
             else:
                 print(json.dumps(content))
-                log_message(message)
+                log_message(content)
                 return jsonify(False)
 
         # The platform must be either “Algorand” or "Ethereum".
         else:
-            print(json.dumps(message))
-            log_message(message)
+            print(json.dumps(content))
+            log_message(content)
             return jsonify(False)
 
 
